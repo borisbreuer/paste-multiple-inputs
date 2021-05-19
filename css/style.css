@@ -13,10 +13,10 @@ main{
 }
 
 .ready-to-paste{
-  background-color: aqua;
+  background-color: lightblue;
 }
 
-input{
+input.mpg{
   display:block;
   margin-bottom:10px;
 }

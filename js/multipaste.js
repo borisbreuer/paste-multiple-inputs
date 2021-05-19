@@ -1,3 +1,8 @@
+/**
+ * @author Boris Breuer
+ * @copyright Boris Breuer
+ */
+
 class Multipaste{
   constructor(className){
     this.className = className;
@@ -9,19 +14,6 @@ class Multipaste{
 
     this.registerElements();
   }
-
-  /* Copy & Paste Example
-    7  
-    5    
-    74
-    4   
-    4 
-    8     
-    4 
-    9  
-    3 
-    3   
-  */
 
   paste = async (e) => {
     e.preventDefault();
@@ -47,7 +39,10 @@ class Multipaste{
     try{
       confirm = await this.confirm('Press the key [y], [Enter] or [Return] to proceed. Press the key [n] to abort.')
     } catch(err){
-      console.error(err);
+      if(this.confirmPrompt) this.removeConfirmPrompt()
+      this.createConfirmPrompt(err.message)
+      console.error(err)
+      setTimeout(() => this.removeConfirmPrompt(), 3000)
     }
 
     if(confirm){
