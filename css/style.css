@@ -1,0 +1,35 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+  margin:0;
+}
+
+main{
+  padding:1em;
+  z-index: 0;
+}
+
+.ready-to-paste{
+  background-color: aqua;
+}
+
+input{
+  display:block;
+  margin-bottom:10px;
+}
+
+.confirm-prompt{
+  position:absolute;
+  margin:1em auto;
+  padding:1em;
+  background-color: white;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 3px;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}
